@@ -11,7 +11,6 @@ export default function SignUp() {
     formState: { errors },
   } = useForm();
 
-  // Define the mutation for signing up
   const { mutate: signupMutation } = useMutation({
     mutationKey: "signup",
     mutationFn: postRegister,

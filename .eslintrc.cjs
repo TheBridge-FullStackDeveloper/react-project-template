@@ -18,7 +18,6 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
-    // props validation is not required for TS projects
     'react/prop-types': 'off',
   },
 }

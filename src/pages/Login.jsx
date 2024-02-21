@@ -11,9 +11,7 @@ export default function Login() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const [json, setJson] = useState({});
 
-  // Mutation for email/password login
   const { mutate: loginMutate, isLoading } = useMutation({
     mutationKey: "login",
     mutationFn: postLogin,
@@ -25,19 +23,8 @@ export default function Login() {
     },
   });
 
-  // Handler for form submission
   const onSubmit = (data) => {
     loginMutate(data);
-  };
-
-  // Google login function
-  const googleLogin = async () => {
-    try {
-      await signInWithPopup(auth, provider);
-      navigate("/");
-    } catch (error) {
-      console.error("Error al loguear con Google:", error);
-    }
   };
 
   return (

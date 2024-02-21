@@ -3,8 +3,6 @@ import { HomePage } from "./pages/HomePage";
 import { NavBar } from "./components/NavBar";
 import SignUp from "./pages/Signup";
 import Login from "./pages/Login";
-import { AuthProvider } from "./context/AuthProvider";
-import ProtectedRoute from "./components/ProtectedRoute";
 import RequireAuth from "./components/ProtectedRoute";
 
 function App() {

@@ -1,7 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
 import { postLogin } from "../service/auth";
 
 export default function Login() {

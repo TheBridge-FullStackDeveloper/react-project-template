@@ -1,12 +1,8 @@
-import React, { useContext, useState, useEffect } from "react";
+import { useState, useEffect, createContext } from "react";
 import { isUserLoggedIn } from "../service/auth";
 import { useQuery } from "@tanstack/react-query";
 
-const AuthContext = React.createContext();
-
-export function useAuth() {
-  return useContext(AuthContext);
-}
+export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);

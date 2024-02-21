@@ -1,10 +1,8 @@
 import { useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
-import { useNavigate } from "react-router-dom";
 import { postRegister } from "../service/auth";
 
 export default function SignUp() {
-  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
